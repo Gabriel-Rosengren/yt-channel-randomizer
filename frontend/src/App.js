@@ -25,7 +25,11 @@ function logInUser() {
 }
 
 function getSuggestedChannels(searchQuery) {
+<<<<<<< HEAD
   axios.get(`http://localhost:8000/search?searchQuery=${encodeURIComponent(searchQuery)}`)
+=======
+  axios.get(`/search?searchQuery=${encodeURIComponent(searchQuery)}`)
+>>>>>>> a66bafff669a5ee94edb976a1ca42371842fd684
   .then(function (response) {
     console.log('Response Recieved')
     
