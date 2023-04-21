@@ -4,7 +4,10 @@ export default function SearchBar(props) {
   return(
     <div className="container">
       <input type="text" placeholder='Search...' required/>
-      <button type='submit' onClick={props.function}>Search</button>
+      <button type='submit' onClick={() => {
+        const searchQuery = document.querySelector('input').value
+        props.function(searchQuery)
+      }}>Search</button>
     </div>
   )
 }
